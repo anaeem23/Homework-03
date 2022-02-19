@@ -1,20 +1,14 @@
 # 03 JavaScript: Password Generator
 
-## Your Task
+## The Assignment
 
-This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+Was tasked, from scratch, to create a JavaScript file that would generate a password when prompted. The specifications were that when the "Generate Password" button was clicked, the browser would prompt a series of questions to the user related to the password criteria. The criterias were the password length and if the following character types should be included: lowercase, uppercase, numbers, or special characters. The [special characters](https://www.owasp.org/index.php/Password_special_characters) listed by the OWASP Foundation were used. 
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
 
-## User Story
-
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
 
 ## Acceptance Criteria
+
+In order for the project to be considered successful, all of the following acceptance critera were to be met. By the end of the project, they were.  
 
 ```
 GIVEN I need a new, secure password
@@ -40,53 +34,8 @@ The following image shows the web application's appearance and functionality:
 
 ![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
 
-## Grading Requirements
+Once "Generate Password" is clicked, the browser opens a dialoge using the confirm command to cycle through the password criteria. "Ok" means YES and "Cancel" means NO. If the user chooses NO for every criteria, the browser will alert them of this and they will be prompted to answer all the criterias again until they choose YES for atleast one. In addition, if the user chooses a password length of less than 8 or greater than 24, the browser will alert them of this and they will have to enter the password length again. Once they answer all the questions, the browser will display their new password. 
 
-This homework is graded based on the following criteria: 
+## Submission
 
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+The live URL: https://anaeem23.github.io/Northwestern_BootCamp-03-Homework/
