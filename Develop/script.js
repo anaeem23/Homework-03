@@ -3,7 +3,6 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-
   // Asking for criteria and confirming they chose something
   var characterTest = 0;
   while (characterTest === 0) {
@@ -33,119 +32,100 @@ function writePassword() {
   var lower = "abcdefghijklmnopqrstuvwxyz";
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numeric = "0123456789";
-  var special = "!#$%&()*+,-./:;<=>?@[\]^_`{}|~";
+  var special = "!#$%&()*+,-./:;<=>?@[]^_`{}|~";
   var text = " ";
 
-
   if (lowerCase && upperCase && numericCase && specialCase) {
-
     var possible = lower + upper + numeric + special;
     for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-
-  } else if(!lowerCase && upperCase && numericCase && specialCase) {
-
-    var possible = upper + numeric + special
+  } else if (!lowerCase && upperCase && numericCase && specialCase) {
+    var possible = upper + numeric + special;
     for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-
-  } else if(!lowerCase && !upperCase && numericCase && specialCase) {
-
-    var possible = numeric + special
+  } else if (!lowerCase && !upperCase && numericCase && specialCase) {
+    var possible = numeric + special;
     for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(!lowerCase && !upperCase && !numericCase && specialCase) {
-
-    var possible = special
+  } else if (!lowerCase && !upperCase && !numericCase && specialCase) {
+    var possible = special;
     for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(lowerCase && !upperCase && numericCase && specialCase) {
-
-    var possible = lower + numeric + special
-    for (var i = 0; i < numberCharacters; i++){
+  } else if (lowerCase && !upperCase && numericCase && specialCase) {
+    var possible = lower + numeric + special;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(lowerCase && !upperCase && !numericCase && specialCase) {
-
-    var possible = lower + special
-    for (var i = 0; i < numberCharacters; i++){
+  } else if (lowerCase && !upperCase && !numericCase && specialCase) {
+    var possible = lower + special;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(lowerCase && !upperCase && !numericCase && !specialCase) {
-
-    var possible = lower
-    for (var i = 0; i < numberCharacters; i++){
+  } else if (lowerCase && !upperCase && !numericCase && !specialCase) {
+    var possible = lower;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(lowerCase && upperCase && !numericCase && specialCase) {
-
-    var possible = lower + upper + special
-    for (var i = 0; i < numberCharacters; i++){
+  } else if (lowerCase && upperCase && !numericCase && specialCase) {
+    var possible = lower + upper + special;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(lowerCase && upperCase && !numericCase && !specialCase) {
-
-    var possible = lower + upper
-    for (var i = 0; i < numberCharacters; i++){
+  } else if (lowerCase && upperCase && !numericCase && !specialCase) {
+    var possible = lower + upper;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(!lowerCase && upperCase && !numericCase && !specialCase) {
-
-    var possible = upper
-    for (var i = 0; i < numberCharacters; i++){
+  } else if (!lowerCase && upperCase && !numericCase && !specialCase) {
+    var possible = upper;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(lowerCase && upperCase && numericCase && !specialCase) {
-
-    var possible = lower + upper + numeric
-    for (var i = 0; i < numberCharacters; i++){
+  } else if (lowerCase && upperCase && numericCase && !specialCase) {
+    var possible = lower + upper + numeric;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-  } else if(!lowerCase && upperCase && numericCase && !specialCase) {
-
-    var possible = upper + numeric
-    for (var i = 0; i < numberCharacters; i++){
+  } else if (!lowerCase && upperCase && numericCase && !specialCase) {
+    var possible = upper + numeric;
+    for (var i = 0; i < numberCharacters; i++) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+  } else if (lowerCase && !upperCase && numericCase && !specialCase) {
+    var possible = lower + numeric;
+    for (var i = 0; i < numberCharacters; i++) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+  } else if (!lowerCase && upperCase && !numericCase && specialCase) {
+    var possible = upper + special;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
   } else {
-
-    var possible = numeric
-    for (var i = 0; i < numberCharacters; i++){
+    var possible = numeric;
+    for (var i = 0; i < numberCharacters; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
   }
- 
 
-  
+  var passwordText = document.querySelector("#password");
+  {
+    // passwordText.value = password;
 
-  var passwordText = document.querySelector("#password"); {
+    passwordText.value = text;
 
-  // passwordText.value = password;
-
-
-
-
-  passwordText.value = text;
-
-  return text;
-
+    return text;
   }
-
-
-
-
 }
 
-
-var test = "123"
-var test2 = "456"
-var test3 = test + test2
-console.log(test3)
-
+var test = "123";
+var test2 = "456";
+var test3 = test + test2;
+console.log(test3);
 
 // Add event listener to generate button
 
@@ -156,4 +136,3 @@ generateBtn.onclick = function () {
 function Test() {
   console.log(`I DID IT`);
 }
-
