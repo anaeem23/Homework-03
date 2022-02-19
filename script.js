@@ -26,9 +26,22 @@ function writePassword() {
     }
   }
 
+  var numberTest = 0;
+
+  while (numberTest === 0) {
   var numberCharacters = prompt(
     `How many characters should your password be? Must choose a number between 8 and 24`
   );
+
+  if (numberCharacters<8 || numberCharacters>24) {
+    alert("You put a number which is either less than 8 or greater than 24. Please try again.");
+  } else {
+    numberTest =1;
+  }
+  }
+
+
+
   var lower = "abcdefghijklmnopqrstuvwxyz";
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numeric = "0123456789";
@@ -122,10 +135,7 @@ function writePassword() {
   }
 }
 
-var test = "123";
-var test2 = "456";
-var test3 = test + test2;
-console.log(test3);
+
 
 // Add event listener to generate button
 
